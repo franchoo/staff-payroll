@@ -30,6 +30,7 @@ class PayrollServiceImpl implements PayrollService {
     } catch (NumberFormatException e) {
       employees = Stream.empty();
     }
+    // Factory method PayrollEmployee::from for concrete instances...
     return employees.map(PayrollEmployee::from).collect(toList());
   }
 }
