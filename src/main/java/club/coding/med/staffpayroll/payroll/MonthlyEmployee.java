@@ -1,10 +1,14 @@
 package club.coding.med.staffpayroll.payroll;
 
+import club.coding.med.staffpayroll.employees.Phone;
+
 public class MonthlyEmployee implements PayrollEmployee {
 
   private int id;
   private String name;
   private String contractTypeName;
+  private String phoneType;
+  private String phoneNumber;
   private int roleId;
   private String roleName;
   private String roleDescription;
@@ -37,6 +41,22 @@ public class MonthlyEmployee implements PayrollEmployee {
   @Override
   public String getContractTypeName() {
     return contractTypeName;
+  }
+
+  @Override
+  public void setPhone(Phone phone) {
+    this.phoneType = phone.getType().name();
+    this.phoneNumber = phone.getNumber();
+  }
+
+  @Override
+  public String getPhoneType() {
+    return phoneType;
+  }
+
+  @Override
+  public String getPhoneNumber() {
+    return phoneNumber;
   }
 
   @Override

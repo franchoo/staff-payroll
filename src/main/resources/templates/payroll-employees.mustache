@@ -29,6 +29,8 @@
       <th>Id</th>
       <th>Name</th>
       <th>Contract</th>
+      <th>Phone Type</th>
+      <th>Phone Number</th>
       <th>Role</th>
       <th>Role Description</th>
       <th>Base Salary</th>
@@ -41,10 +43,12 @@
         <td>{{id}}</td>
         <td>{{#name}}{{.}}{{/name}}</td>
         <td>{{#contractTypeName}}{{.}}{{/contractTypeName}}</td>
+        <td>{{#phoneType}}{{.}}{{/phoneType}}</td>
+        <td>{{#phoneNumber}}{{.}}{{/phoneNumber}}</td>
         <td>{{#roleName}}{{.}}{{/roleName}}</td>
         <td>{{#roleDescription}}{{.}}{{/roleDescription}}</td>
-        <td>{{formattedBaseSalary}}</td>
-        <td>{{formattedAnnualSalary}}</td>
+        <td align="right">{{formattedBaseSalary}}</td>
+        <td align="right">{{formattedAnnualSalary}}</td>
       </tr>
     {{/employees}}
     </tbody>

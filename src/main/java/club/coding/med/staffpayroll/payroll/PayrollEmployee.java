@@ -1,7 +1,9 @@
 package club.coding.med.staffpayroll.payroll;
 
+import static java.text.NumberFormat.getCurrencyInstance;
+
 import club.coding.med.staffpayroll.employees.Employee;
-import java.text.NumberFormat;
+import club.coding.med.staffpayroll.employees.Phone;
 
 /**
  * DTO Abstraction.
@@ -15,6 +17,12 @@ interface PayrollEmployee {
 
   String getContractTypeName();
 
+  void setPhone(Phone phone);
+
+  String getPhoneType();
+
+  String getPhoneNumber();
+
   int getRoleId();
 
   String getRoleName();
@@ -26,11 +34,11 @@ interface PayrollEmployee {
   double getAnnualSalary();
 
   default String getFormattedBaseSalary() {
-    return NumberFormat.getCurrencyInstance().format(getBaseSalary());
+    return getCurrencyInstance().format(getBaseSalary());
   }
 
   default String getFormattedAnnualSalary() {
-    return NumberFormat.getCurrencyInstance().format(getAnnualSalary());
+    return getCurrencyInstance().format(getAnnualSalary());
   }
 
   static PayrollEmployee from(Employee emp) {

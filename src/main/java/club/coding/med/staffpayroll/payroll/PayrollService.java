@@ -8,4 +8,8 @@ import java.util.List;
 interface PayrollService {
 
   List<PayrollEmployee> getEmployees(String id);
+
+  int savePhone(int empId, String type, String number);
+
+  int deletePhone(int empId);
 }
