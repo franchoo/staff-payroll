@@ -3,9 +3,9 @@ masglobal:
     api-uri: http://masglobaltestapi.azurewebsites.net/api
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3406/masglobal
+    url: jdbc:mysql://localhost:3406/payroll
     username: payroll
-    password: m4sgl0b4l
+    password: d0ck3r1z3
   jpa:
     hibernate:
       ddl-auto: create
